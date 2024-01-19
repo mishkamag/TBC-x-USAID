@@ -1,6 +1,9 @@
+import cardData from "./cards.js";
+
 const header = document.getElementById("mainHeader");
 const menuBtn = document.getElementById("menuBtn");
 const mainNav = document.getElementById("mainNav");
+const container = document.getElementById("card-container");
 
 //add transparant for header
 document.addEventListener("scroll", function () {
@@ -24,4 +27,20 @@ document.addEventListener("click", function (event) {
     mainNav.classList.remove("mobile-links");
     menuBtn.innerHTML = "Menu";
   }
+});
+
+cardData.map((card) => {
+  const cardElement = document.createElement("div");
+  cardElement.className = "card";
+
+  cardElement.innerHTML = `
+      <img src="${card.imgUrl}" alt=""/>
+      <div class="card__info">
+        <p class="card__title">${card.title}</p>
+        <p class="card__desc">${card.description}</p>
+      </div>
+      <span class="card__about">${card.about}</span>
+    `;
+
+  container.appendChild(cardElement);
 });
