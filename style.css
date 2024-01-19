@@ -56,6 +56,11 @@ section h1 {
   color: white;
 }
 
+.header-nav-logo {
+  max-width: 100%;
+  height: auto;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -84,4 +89,33 @@ section h1 {
 
 main h1 {
   height: 1200px;
+}
+
+/* Hero section */
+.hero {
+  background: url("/assets/hero.png.webp") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+}
+
+.hero-title {
+  background-color: #2b2b2b;
+}
+
+.hero-title__subtitle {
+  color: white;
+  font-size: 1.8rem;
+  line-height: 125%;
+}
+
+.hero-title__more {
+  color: #3498db;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+}
+
+.hero-title__more:hover {
+  color: gray;
+  cursor: pointer;
 }
