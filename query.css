@@ -25,10 +25,13 @@
     color: white;
     background-color: transparent;
     border: none;
+    position: absolute;
+    z-index: 1000;
+    right: 2rem;
   }
 
   .mobile-links {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 50%;
@@ -36,11 +39,13 @@
     background-color: #1a1e1f;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 3rem;
     z-index: 1;
     color: white;
+    padding-right: 2rem;
+    font-size: 2rem;
   }
 }
 

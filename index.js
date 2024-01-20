@@ -21,6 +21,8 @@ document.addEventListener("scroll", function () {
 menuBtn.addEventListener("click", function () {
   mainNav.classList.toggle("mobile-links");
   menuBtn.innerHTML = menuBtn.innerHTML === "Menu" ? "x" : "Menu";
+  document.body.style.overflow =
+    document.body.style.overflow === "hidden" ? "auto" : "hidden";
 });
 
 document.addEventListener("click", function (event) {
@@ -73,3 +75,77 @@ buttons.forEach((button) => {
     }
   });
 });
+
+// Responsive Image Slider
+const sliderContainer = document.querySelector(".partniors .container");
+const sliders = document.querySelectorAll(".partniors .container > div");
+const totalSlides = sliders.length;
+let currentSlide = 1;
+
+function showSlide(index) {
+  sliders.forEach((slider) => {
+    slider.style.display = "none";
+  });
+
+  sliders[index - 1].style.display = "flex";
+}
+
+function updateDots() {
+  const dotsContainer = document.querySelector(".slider-dots");
+
+  if (!dotsContainer) {
+    return;
+  }
+
+  while (dotsContainer.firstChild) {
+    dotsContainer.removeChild(dotsContainer.firstChild);
+  }
+
+  for (let i = 1; i <= totalSlides; i++) {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.addEventListener("click", () => {
+      currentSlide = i;
+      showSlide(currentSlide);
+      updateDots();
+    });
+
+    if (i === currentSlide) {
+      dot.classList.add("active");
+    }
+
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function handleArrowClick(direction) {
+  if (direction === "prev") {
+    currentSlide =
+      (currentSlide - 1 + totalSlides) % totalSlides || totalSlides;
+  } else {
+    currentSlide = (currentSlide % totalSlides) + 1;
+  }
+
+  showSlide(currentSlide);
+  updateDots();
+}
+
+const leftArrow = document.createElement("div");
+leftArrow.className = "arrow left-arrow";
+leftArrow.addEventListener("click", () => handleArrowClick("prev"));
+
+const rightArrow = document.createElement("div");
+rightArrow.className = "arrow right-arrow";
+rightArrow.addEventListener("click", () => handleArrowClick("next"));
+
+sliderContainer.appendChild(leftArrow);
+sliderContainer.appendChild(rightArrow);
+
+const dotsContainer = document.createElement("div");
+dotsContainer.className = "slider-dots";
+sliderContainer.appendChild(dotsContainer);
+
+showSlide(currentSlide);
+updateDots();
+
+setInterval(() => handleArrowClick("next"), 5000);
