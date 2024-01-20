@@ -51,7 +51,7 @@ section h1 {
 
 .container {
   padding: 2rem;
-  max-width: 65%;
+  max-width: 80%;
   margin-inline: auto;
   color: white;
 }
@@ -89,10 +89,29 @@ section h1 {
 
 /* Hero section */
 .hero {
-  background: url("/assets/hero.png.webp") center no-repeat;
+  background: url("./assets/hero.png.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 500px;
+}
+
+.hero__desc {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Inter";
+  min-height: 400px;
+  justify-content: center;
+}
+
+.hero__desc h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.hero__desc h2 {
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .hero-title {
@@ -123,7 +142,7 @@ section h1 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(15.5rem, 80%), 1fr));
   grid-gap: 2rem;
   grid-template-rows: 3;
 }
@@ -228,6 +247,7 @@ section h1 {
   font-size: 1.2rem;
   color: #fff;
   cursor: pointer;
+  gap: 1rem;
 }
 .faq__question p {
   font-size: 0.9rem;
@@ -242,6 +262,10 @@ section h1 {
   max-height: 1200px;
   opacity: 1;
   padding: 1rem 0;
+}
+
+.faq__question span {
+  text-align: start;
 }
 
 .d-arrow {
