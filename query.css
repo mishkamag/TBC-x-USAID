@@ -1,11 +1,22 @@
+@media (max-width: 1536px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
 @media (max-width: 768px) {
-  .navigation__list {
-    display: none;
-    position: relative;
+  .container {
+    max-width: 640px;
   }
 
-  .container {
-    max-width: 90%;
+  .navigation__list {
+    display: none;
   }
 
   #menuBtn {
@@ -14,8 +25,6 @@
     color: white;
     background-color: transparent;
     border: none;
-    position: absolute;
-    right: 0;
   }
 
   .mobile-links {
@@ -32,5 +41,16 @@
     gap: 3rem;
     z-index: 1;
     color: white;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    max-width: 380px;
   }
 }
