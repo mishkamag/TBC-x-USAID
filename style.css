@@ -252,3 +252,55 @@ section h1 {
 .faq__question button .d-arrow.rotate {
   transform: rotate(180deg);
 }
+
+/* Footer section */
+.footer__section {
+  background-color: #1a1e1f;
+}
+
+.footer__tbc-logo {
+  width: 106px;
+}
+
+.footer__logos,
+.footer__social-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__social-links {
+  margin-left: 10px;
+  width: 40px;
+}
+
+.footer__rights-reserved-container {
+  margin: 20px 0px;
+}
+
+.footer__all-rights-reserved,
+.footer__terms-and-conditions {
+  color: whitesmoke;
+  cursor: default;
+}
+
+.footer__terms-and-conditions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__contact-btn {
+  background-color: #00aef3;
+  padding: 6px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.footer__contact-btn:hover {
+  transition: 0.4s;
+  background-color: #d5d5d5;
+  color: black;
+}
