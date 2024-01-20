@@ -1,6 +1,6 @@
 const cardData = [
   {
-    imgUrl: "/assets/ios.webp",
+    imgUrl: "./assets/ios.webp",
     title: "iOS developer",
     description: "რეგისტრაცია დასრულებულია",
     about: "კურსის დეტალები",
