@@ -106,14 +106,15 @@ section h1 {
   color: white;
   justify-content: flex-end;
   min-height: 300px;
+  gap: 1.8rem;
 }
 
-.hero__desc h1 {
+.hero__desc__title {
   font-size: 2.5rem;
   font-weight: 800;
 }
 
-.hero__desc h2 {
+.hero__desc__subtitle {
   font-size: 2rem;
   font-weight: 800;
 }
@@ -392,7 +393,7 @@ section h1 {
 
 .footer__contact-btn {
   background-color: #00aef3;
-  padding: 6px 30px;
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
