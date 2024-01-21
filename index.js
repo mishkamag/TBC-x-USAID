@@ -35,7 +35,6 @@ document.addEventListener("click", function (event) {
     !event.target.closest("#menuBtn")
   ) {
     mainNav.classList.remove("mobile-links");
-    menuBtn.innerHTML = "Menu";
   }
 });
 
