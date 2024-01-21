@@ -17,7 +17,6 @@
 
   .navigation__list {
     display: none;
-    transition: transform 0.3s ease;
   }
 
   #menuBtn {
@@ -47,7 +46,6 @@
     color: white;
     padding-right: 2rem;
     font-size: 2rem;
-    transition: transform 0.3s ease;
   }
 
   .partniors__items {

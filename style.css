@@ -43,7 +43,6 @@ section h1 {
   min-height: 80px;
   align-items: center;
   z-index: 1000;
-  transition: background-color 0.4s ease, transform 0.3s ease;
 }
 
 .main-header.transparent {
@@ -81,6 +80,10 @@ section h1 {
 .navigation__list a:hover,
 .navigation__list a.active {
   color: rgb(0, 174, 243);
+}
+
+.navigation__menu-btn {
+  font-size: 2rem;
 }
 
 .mobile-links,

@@ -6,32 +6,25 @@ const mainNav = document.getElementById("mainNav");
 const container = document.getElementById("card-container");
 const buttons = document.querySelectorAll("button");
 
-//navbar scroll down transparanet, also if responsive show/hide
-let lastScrollTop = 0;
+//add transparant for header when scroll down
 
 document.addEventListener("scroll", function () {
-  const currentScrollTop = window.scrollY;
-
-  if (currentScrollTop > 100) {
+  if (window.scrollY > 100) {
     header.classList.add("transparent");
   } else {
     header.classList.remove("transparent");
   }
-
-  if (currentScrollTop > lastScrollTop) {
-    header.style.transform = "translateY(-100%)";
-  } else {
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScrollTop = currentScrollTop;
 });
 
 //burger icon show and hide
 
 menuBtn.addEventListener("click", function () {
   mainNav.classList.toggle("mobile-links");
-  menuBtn.innerHTML = menuBtn.innerHTML === "Menu" ? "x" : "Menu";
+
+  const icon = menuBtn.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+
   document.body.style.overflow =
     document.body.style.overflow === "hidden" ? "auto" : "hidden";
 });
