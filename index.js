@@ -6,14 +6,25 @@ const mainNav = document.getElementById("mainNav");
 const container = document.getElementById("card-container");
 const buttons = document.querySelectorAll("button");
 
-//add transparant for header when scroll down
+//navbar scroll down transparanet, also if responsive show/hide
+let lastScrollTop = 0;
 
 document.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+  const currentScrollTop = window.scrollY;
+
+  if (currentScrollTop > 100) {
     header.classList.add("transparent");
   } else {
     header.classList.remove("transparent");
   }
+
+  if (currentScrollTop > lastScrollTop) {
+    header.style.transform = "translateY(-100%)";
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = currentScrollTop;
 });
 
 //burger icon show and hide
