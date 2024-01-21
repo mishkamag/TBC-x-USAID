@@ -204,29 +204,33 @@ section h1 {
 
 .partniors {
   background-color: rgba(0, 0, 0, 0.7);
-
   position: relative;
   overflow: hidden;
 }
 
-.slider-item {
+.partniors__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  max-width: 100%;
 }
 
-.partniors img {
-  width: 30%;
+.parniors__alone {
+  display: flex;
+  justify-content: center;
+}
+
+.partniors__items__img {
+  max-width: 20%;
   height: auto;
 }
 
-.partniors .arrow {
+.partniors__btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -234,11 +238,11 @@ section h1 {
   font-size: 20px;
 }
 
-.partniors .left-arrow {
+.partniors__left {
   left: 10px;
 }
 
-.partniors .right-arrow {
+.partniors__right {
   right: 10px;
 }
 

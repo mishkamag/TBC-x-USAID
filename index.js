@@ -130,16 +130,11 @@ function handleArrowClick(direction) {
   updateDots();
 }
 
-const leftArrow = document.createElement("div");
-leftArrow.className = "arrow left-arrow";
+const leftArrow = document.getElementById("left-arrow");
 leftArrow.addEventListener("click", () => handleArrowClick("prev"));
 
-const rightArrow = document.createElement("div");
-rightArrow.className = "arrow right-arrow";
+const rightArrow = document.getElementById("right-arrow");
 rightArrow.addEventListener("click", () => handleArrowClick("next"));
-
-sliderContainer.appendChild(leftArrow);
-sliderContainer.appendChild(rightArrow);
 
 const dotsContainer = document.createElement("div");
 dotsContainer.className = "slider-dots";
@@ -148,4 +143,4 @@ sliderContainer.appendChild(dotsContainer);
 showSlide(currentSlide);
 updateDots();
 
-setInterval(() => handleArrowClick("next"), 5000);
+// setInterval(() => handleArrowClick("next"), 3000);

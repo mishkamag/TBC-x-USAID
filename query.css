@@ -47,6 +47,19 @@
     padding-right: 2rem;
     font-size: 2rem;
   }
+
+  .partniors__items {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .partniors__btn {
+    display: none;
+  }
+
+  .partniors__items__img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
