@@ -94,23 +94,6 @@
   .partniors__right {
     right: 10px;
   }
-
-  /* footer section */
-  .footer__container {
-    gap: 2rm;
-  }
-
-  .footer__terms-and-conditions-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .footer__rights-reserved-container,
-  .footer__logos,
-  .footer__social-links-container {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 640px) {
@@ -131,5 +114,28 @@
   }
   .hero-title__subtitle {
     font-size: 1.2rem;
+  }
+
+  /* footer section */
+  .footer__container {
+    gap: 2rm;
+  }
+
+  .footer__terms-and-conditions-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer__rights-reserved-container,
+  .footer__logos,
+  .footer__social-links-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 424px) {
+  .container {
+    max-width: 348px;
   }
 }
