@@ -133,3 +133,20 @@ buttons.forEach((button) => {
     }
   });
 });
+
+let touchStartX = 0;
+
+sliderContainer.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+sliderContainer.addEventListener("touchend", (e) => {
+  const touchEndX = e.changedTouches[0].clientX;
+  const swipeThreshold = 50;
+
+  if (touchStartX - touchEndX > swipeThreshold) {
+    handleArrowClick("next");
+  } else if (touchEndX - touchStartX > swipeThreshold) {
+    handleArrowClick("prev");
+  }
+});
