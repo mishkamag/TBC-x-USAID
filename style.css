@@ -86,7 +86,7 @@ section h1 {
   font-size: 2rem;
 }
 
-.mobile_burger .mobile-active {
+.mobile_burger {
   display: none;
 }
 
