@@ -21,7 +21,7 @@ For all courses section, I have created a separate javascript file where I have 
 
 #### Partniors carusel section
 
-I have divided the partners section into 3 blocks, I have made a "carousel" and these blocks change each other both manually on "click" and automatically every 4 seconds
+I have divided the partners section into 3 blocks, I have made a "carousel" and these blocks change each other both manually on "click" and automatically every 4 seconds. **Also, when we use during responsive size, we can manage this slider without the icons, for this used "touch event"**
 
 ### Footer
 
@@ -29,4 +29,5 @@ In the footer section, I have placed additional icons and information about the 
 
 ## Instructions on how to launch the project
 
-Open **index.html** and start with **"Open with live server"**
+Open **index.html** and start with **"Open with live server"** Also can visit
+**[Live URL ](https://mishkamag.github.io/TBC-x-USAID/)**
