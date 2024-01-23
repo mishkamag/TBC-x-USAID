@@ -45,18 +45,59 @@
   .hero__desc__subtitle {
     font-size: 1.5rem;
   }
-  #menuBtn {
+
+  .mobile_burger {
     display: block;
+    margin-right: 5%;
     cursor: pointer;
-    color: white;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    z-index: 1000;
-    right: 2rem;
+    z-index: 111;
   }
 
-  .mobile-links {
+  .mobile_burger div {
+    width: 55px;
+    position: relative;
+  }
+
+  .mobile_burger span {
+    background: #f4f4f4;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.5s, width 0.5s;
+  }
+
+  .mobile_burger .line-1 {
+    width: 50%;
+    transform: translate(0, -10px);
+    transform-origin: 100% 100%;
+  }
+
+  .mobile_burger .line-3 {
+    width: 50%;
+    left: auto;
+    right: 0;
+    transform: translate(100%, 10px);
+    transform-origin: 0 0;
+  }
+
+  .openmenu .line-1 {
+    transform: translate(-4px, -5px) rotate(45deg);
+  }
+
+  .openmenu .line-2 {
+    transform: translate(0, -100%) rotate(-45deg);
+  }
+
+  .openmenu .line-3 {
+    transform: translate(29px, -1px) rotate(45deg);
+  }
+
+  .mobile-active {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;

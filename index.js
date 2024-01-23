@@ -1,7 +1,7 @@
 import cardData from "./cards.js";
 
 const header = document.getElementById("mainHeader");
-const menuBtn = document.getElementById("menuBtn");
+const burgerBtn = document.getElementById("burger");
 const mainNav = document.getElementById("mainNav");
 const container = document.getElementById("card-container");
 const buttons = document.querySelectorAll("button");
@@ -19,13 +19,10 @@ document.addEventListener("scroll", function () {
   }
 });
 
-//burger icon show and hide when change tablet size
-menuBtn.addEventListener("click", function () {
-  mainNav.classList.toggle("mobile-links");
-
-  const icon = menuBtn.querySelector("i");
-  icon.classList.toggle("fa-bars");
-  icon.classList.toggle("fa-times");
+burgerBtn.addEventListener("click", function () {
+  mainNav.classList.toggle("mobile-active");
+  const icon = burgerBtn.querySelector("div");
+  icon.classList.toggle("openmenu");
 
   document.body.style.overflow =
     document.body.style.overflow === "hidden" ? "auto" : "hidden";
@@ -56,7 +53,7 @@ cardData.map((card) => {
   container.appendChild(cardElement);
 });
 
-// Partniors carusel section
+// Parniors carusel section
 const totalSlides = sliders.length;
 let currentSlide = 1;
 
