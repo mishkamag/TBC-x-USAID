@@ -60,12 +60,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    max-width: 50%;
+    min-width: 40%;
     height: 100vh;
     background-color: #1a1e1f;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     gap: 4rem;
     z-index: 1;
     color: white;
