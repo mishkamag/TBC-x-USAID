@@ -291,15 +291,14 @@ section h1 {
 .faq__headlines {
   display: flex;
   justify-content: space-between;
-}
-
-.faq__headlines {
+  min-width: 100%;
   font-size: 1.5rem;
 }
 
 .faq__headlines h2 {
   color: #3498db;
   font-size: 1.2rem;
+  text-align: end;
 }
 
 .faq__headlines h2:hover {
