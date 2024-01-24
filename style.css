@@ -233,7 +233,7 @@ section h1 {
 
 .partniors__alone {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .partniors__icon {
