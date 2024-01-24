@@ -10,15 +10,24 @@ const sliders = document.querySelectorAll(".partniors .container > div");
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 
-//add transparant for header when scroll down
+//add transparant and show/hide for header when scroll
+let lastScrollPosition = 0;
 document.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
-    header.classList.add("transparent");
-  } else {
-    header.classList.remove("transparent");
+  if (window.innerWidth <= 768) {
+    const currentScrollPosition = window.scrollY;
+    if (
+      currentScrollPosition > lastScrollPosition &&
+      currentScrollPosition > 100
+    ) {
+      header.classList.add("hide-header");
+    } else {
+      header.classList.remove("hide-header");
+    }
+    lastScrollPosition = currentScrollPosition;
   }
 });
 
+//Burger menu
 burgerBtn.addEventListener("click", function () {
   mainNav.classList.toggle("mobile-active");
   const icon = burgerBtn.querySelector("div");
@@ -28,7 +37,7 @@ burgerBtn.addEventListener("click", function () {
     document.body.style.overflow === "hidden" ? "auto" : "hidden";
 });
 
-//close when click outside of lists
+//close burger menu when click outside of box
 document.addEventListener("click", function (event) {
   if (
     !event.target.closest(".navigation__list") &&
@@ -110,6 +119,23 @@ updateDots();
 
 setInterval(() => handleArrowClick("next"), 4000);
 
+//Partniors carusel for responsive with touch event
+let touchStartX = 0;
+sliderContainer.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+sliderContainer.addEventListener("touchend", (e) => {
+  const touchEndX = e.changedTouches[0].clientX;
+  const swipeThreshold = 50;
+
+  if (touchStartX - touchEndX > swipeThreshold) {
+    handleArrowClick("next");
+  } else if (touchEndX - touchStartX > swipeThreshold) {
+    handleArrowClick("prev");
+  }
+});
+
 // FAQ for show/hide question, also rotate icon
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -132,21 +158,4 @@ buttons.forEach((button) => {
       currentIcon.classList.toggle("rotate");
     }
   });
-});
-
-let touchStartX = 0;
-
-sliderContainer.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
-});
-
-sliderContainer.addEventListener("touchend", (e) => {
-  const touchEndX = e.changedTouches[0].clientX;
-  const swipeThreshold = 50;
-
-  if (touchStartX - touchEndX > swipeThreshold) {
-    handleArrowClick("next");
-  } else if (touchEndX - touchStartX > swipeThreshold) {
-    handleArrowClick("prev");
-  }
 });

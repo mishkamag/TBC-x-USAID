@@ -22,6 +22,11 @@
     display: none;
   }
 
+  .main-header.hide-header {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+  }
+
   .hero-title__more {
     font-size: 1.2rem;
   }
@@ -38,11 +43,11 @@
     display: block;
     margin-right: 5%;
     cursor: pointer;
-    z-index: 111;
+    z-index: 100;
   }
 
   .mobile_burger div {
-    width: 55px;
+    width: 35px;
     position: relative;
   }
 
@@ -50,7 +55,7 @@
     background: #f4f4f4;
     width: 100%;
     height: 4px;
-    border-radius: 5px;
+    border-radius: 1px 5px;
     display: block;
     position: absolute;
     top: 50%;
@@ -81,7 +86,7 @@
   }
 
   .openmenu .line-3 {
-    transform: translate(29px, -1px) rotate(45deg);
+    transform: translate(19.5px, -1.5px) rotate(45deg);
   }
 
   .mobile-active {
@@ -96,11 +101,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 2.5rem;
     z-index: 1;
     color: white;
-    padding-inline: 1rem;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     text-align: center;
   }
 
@@ -134,27 +138,62 @@
 
 @media (max-width: 640px) {
   .container {
-    max-width: 535px;
+    max-width: 595px;
+  }
+  .mobile-active {
+    font-size: 1.8rem;
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 585px) {
+  .container {
+    max-width: 525px;
+  }
+
+  .mobile-active {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 525px) {
   .container {
     max-width: 475px;
-  }
-}
-
-@media (max-width: 475px) {
-  .container {
-    max-width: 424px;
   }
   .hero-title__subtitle {
     font-size: 1rem;
   }
 
+  .mobile-active {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    max-width: 398px;
+  }
+}
+
+@media (max-width: 398px) {
+  .container {
+    max-width: 328px;
+  }
+}
+
+@media (max-width: 328px) {
+  .container {
+    max-width: 285px;
+  }
+}
+
+@media (max-width: 285px) {
+  .container {
+    max-width: 235px;
+  }
+
   /* footer section */
   .footer__container {
-    gap: 2rm;
+    gap: 2rem;
   }
 
   .footer__terms-and-conditions-container {
@@ -168,28 +207,10 @@
     display: flex;
     justify-content: center;
   }
-}
-
-@media (max-width: 424px) {
-  .container {
-    max-width: 348px;
-  }
-}
-
-@media (max-width: 348px) {
-  .container {
-    max-width: 288px;
-  }
-}
-
-@media (max-width: 288px) {
-  .container {
-    max-width: 211px;
-  }
-  /* main {
-    min-width: 288px;
+  main {
+    min-width: 285px;
   }
   footer {
-    width: 288px;
-  } */
+    min-width: 285px;
+  }
 }
