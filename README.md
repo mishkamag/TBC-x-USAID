@@ -5,7 +5,7 @@ All sections have the same container that adjusts to be centered and sized accor
 
 ### Header
 
-Inside Header, I have only navigation that changes according to responsiveness.
+Inside Header, I have navigation that changes according to responsiveness. Here also I have a "burger menu" icon that I created manually without an image and it changes shape depending on the state value. **It also has show/hide functionality during scrolling.**
 
 ### Main
 
