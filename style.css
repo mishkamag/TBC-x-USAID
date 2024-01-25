@@ -19,6 +19,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary: #1a1e1f;
+  --secondary: #2b2b2b;
+  --blue: #00a3e0;
+  --tertiary: #161616;
+}
+
 a {
   text-decoration: none;
 }
@@ -38,7 +45,7 @@ section h1 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1a1e1f;
+  background-color: var(--primary);
   transition: background-color 0.4s ease;
   color: white;
   min-height: 80px;
@@ -80,7 +87,7 @@ section h1 {
 
 .navigation__list a:hover,
 .navigation__list a.active {
-  color: rgb(0, 174, 243);
+  color: var(--blue);
 }
 
 .navigation__menu-btn {
@@ -120,7 +127,7 @@ section h1 {
 }
 
 .hero-title {
-  background-color: #2b2b2b;
+  background-color: var(--secondary);
 }
 
 .hero-title__subtitle {
@@ -130,7 +137,7 @@ section h1 {
 }
 
 .hero-title__more {
-  color: rgb(0, 174, 243);
+  color: var(--blue);
   font-size: 1.7rem;
   margin-top: 3rem;
 }
@@ -142,7 +149,7 @@ section h1 {
 
 /* all courses section */
 .courses {
-  background-color: #161616;
+  background-color: var(--tertiary);
 }
 
 .cards {
@@ -153,7 +160,7 @@ section h1 {
 }
 
 .card {
-  background-color: #161616;
+  background-color: var(--tertiary);
   width: 100%;
   border: 1px solid gray;
   border-radius: 8px;
@@ -188,7 +195,7 @@ section h1 {
 
 .card__about {
   padding: 3rem 1rem;
-  color: #3498db;
+  color: var(--blue);
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -208,7 +215,7 @@ section h1 {
 /* Partniors section carusel */
 
 .partniors {
-  background-color: #2b2b2b;
+  background-color: var(--secondary);
   position: relative;
   overflow: hidden;
 }
@@ -255,11 +262,11 @@ section h1 {
 }
 
 .partniors__left {
-  left: 150px;
+  left: 7rem;
 }
 
 .partniors__right {
-  right: 150px;
+  right: 7rem;
 }
 
 .partniors .slider-dots {
@@ -285,7 +292,7 @@ section h1 {
 
 /* FAQ section */
 .faq {
-  background-color: #161616;
+  background-color: var(--tertiary);
 }
 
 .faq__headlines {
@@ -296,7 +303,7 @@ section h1 {
 }
 
 .faq__headlines h2 {
-  color: #3498db;
+  color: var(--blue);
   font-size: 1.2rem;
   text-align: end;
 }
@@ -307,13 +314,13 @@ section h1 {
 }
 
 .faq__question {
-  border-bottom: 1px solid #373636;
+  border-bottom: 1px solid var(--secondary);
   height: auto;
 }
 
 .faq__question button {
   width: 100%;
-  background-color: #161616;
+  background-color: var(--tertiary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,11 +362,11 @@ section h1 {
 
 /* Footer section */
 .footer__section {
-  background-color: #1a1e1f;
+  background-color: var(--primary);
 }
 
 .footer__tbc-logo {
-  width: 106px;
+  width: 7.5rem;
 }
 
 .footer__logos,
@@ -370,18 +377,17 @@ section h1 {
 }
 
 .footer__social-links {
-  margin-left: 10px;
-  width: 40px;
+  margin-left: 0.8rem;
+  width: 2.5rem;
 }
 
 .footer__rights-reserved-container {
-  margin: 20px 0px;
+  margin: 1.5rem 0px;
 }
 
 .footer__all-rights-reserved,
 .footer__terms-and-conditions {
-  color: whitesmoke;
-  cursor: default;
+  color: white;
 }
 
 .footer__terms-and-conditions-container {
@@ -391,16 +397,16 @@ section h1 {
 }
 
 .footer__contact-btn {
-  background-color: #00aef3;
+  background-color: var(--blue);
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: whitesmoke;
+  color: white;
 }
 
 .footer__contact-btn:hover {
   transition: 0.4s;
-  background-color: #d5d5d5;
+  background-color: gray;
   color: black;
 }

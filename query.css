@@ -147,6 +147,10 @@
     font-size: 120%;
     font-weight: 600;
   }
+
+  .partniors__alone {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 585px) {
