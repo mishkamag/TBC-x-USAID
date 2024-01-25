@@ -22,7 +22,7 @@ This is the section where the image in the middle has text , for this I used "ba
 
 #### All courses section
 
-For all courses section, I have created a separate javascript file where I have data for each of them and render each of them also via javascript. Also used "grid", which has "repeat(auto-fit, minmax)" property and this takes the appropriate size for each course's card according to the size of the tablet.
+For all courses section, I have created a separate javascript file where I have data and render each of them also via javascript. Also used "grid", which has "repeat(auto-fit, minmax)" property and this takes the appropriate size for each course's card according to the size of the tablet.
 
 #### Partniors carusel section
 
