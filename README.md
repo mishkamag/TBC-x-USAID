@@ -1,3 +1,8 @@
+# Instructions on how to launch the project
+
+Clone repo, open **index.html** and start with **"Open with live server"** Also can visit
+**[Live URL ](https://mishkamag.github.io/TBC-x-USAID/)**
+
 # The Structure of Project
 
 I have divided the project into 3 main parts, Header, Main and Footer.
@@ -5,7 +10,7 @@ All sections have the same container that adjusts to be centered and sized accor
 
 ### Header
 
-Inside Header, I have navigation that changes according to responsiveness. Here also I have a "burger menu" icon that I created manually without an image and it changes shape depending on the state value. **It also has show/hide functionality during scrolling.**
+Inside Header, I have navigation that changes according to responsiveness. Here also I have a "burger menu" icon that I created manually without an image and it changes shape depending on the state value. When scroll down it gets more transparent. **It also has show/hide functionality, but only for responsive sizes, during scrolling .**
 
 ### Main
 
@@ -26,8 +31,3 @@ I have divided the partners section into 3 blocks, I have made a "carousel" and 
 ### Footer
 
 In the footer section, I have placed additional icons and information about the site
-
-## Instructions on how to launch the project
-
-Open **index.html** and start with **"Open with live server"** Also can visit
-**[Live URL ](https://mishkamag.github.io/TBC-x-USAID/)**
