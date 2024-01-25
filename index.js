@@ -13,18 +13,18 @@ const rightArrow = document.getElementById("right-arrow");
 //add transparant and show/hide for header when scroll
 let lastScrollPosition = 0;
 document.addEventListener("scroll", function () {
-  if (window.innerWidth <= 768) {
-    const currentScrollPosition = window.scrollY;
-    if (
-      currentScrollPosition > lastScrollPosition &&
-      currentScrollPosition > 100
-    ) {
-      header.classList.add("hide-header");
-    } else {
-      header.classList.remove("hide-header");
-    }
-    lastScrollPosition = currentScrollPosition;
+  const currentScrollPosition = window.scrollY;
+  if (
+    currentScrollPosition > lastScrollPosition &&
+    currentScrollPosition > 100
+  ) {
+    header.classList.add("hide-header");
+    header.classList.add("transparent");
+  } else {
+    header.classList.remove("hide-header");
+    header.classList.remove("transparent");
   }
+  lastScrollPosition = currentScrollPosition;
 });
 
 //Burger menu
